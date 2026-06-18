@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <TextView
+            android:text="Zakat Gold Calculator"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/bronze"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:text="Calculate your gold zakat with ease"
+            android:textSize="13sp"
+            android:textColor="@color/text_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Calculator Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_border_gold"
+            android:padding="20dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="20dp">
+
+            <!-- Gold Weight Label -->
+            <TextView
+                android:text="Weight (grams)"
+                android:textColor="@color/bronze"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutWeight"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:boxStrokeColor="@color/gold_dark"
+                app:hintTextColor="@color/gold_dark"
+                app:helperText="e.g. 100"
+                app:helperTextTextColor="@color/text_label">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter weight in grams"
+                    android:textColor="@color/text_primary"
+                    android:inputType="numberDecimal"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Gold Type -->
+            <TextView
+                android:text="Gold Type"
+                android:textColor="@color/bronze"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioKeep"
+                    android:text="Keep (Nisab: 85g)"
+                    android:textColor="@color/text_primary"
+                    android:buttonTint="@color/gold_dark"
+                    android:checked="true"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:id="@+id/radioWear"
+                    android:text="Wear (Nisab: 200g)"
+                    android:textColor="@color/text_primary"
+                    android:buttonTint="@color/gold_dark"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+            </RadioGroup>
+
+            <!-- Gold Price Label -->
+            <TextView
+                android:text="Gold Price (RM/gram)"
+                android:textColor="@color/bronze"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutValue"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:boxStrokeColor="@color/gold_dark"
+                app:hintTextColor="@color/gold_dark"
+                app:helperText="e.g. 280"
+                app:helperTextTextColor="@color/text_label">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter gold price per gram"
+                    android:textColor="@color/text_primary"
+                    android:inputType="numberDecimal"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <!-- Calculate + Reset Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btnCalculate"
+                android:text="Calculate Zakat"
+                android:textColor="@color/white"
+                android:background="@drawable/gradient_gold_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:layout_height="48dp"
+                android:elevation="2dp"/>
+
+            <Button
+                android:id="@+id/btnReset"
+                android:text="Reset"
+                android:textColor="@color/bronze"
+                android:backgroundTint="@color/surface"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                app:strokeColor="@color/gold_dark"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"/>
+
+        </LinearLayout>
+
+        <!-- Results Card -->
+        <LinearLayout
+            android:id="@+id/resultCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_border_gold"
+            android:padding="20dp"
+            android:elevation="4dp"
+            android:visibility="gone">
+
+            <TextView
+                android:text="Calculation Summary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/bronze"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvTotalValue"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="@color/text_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvZakatPayable"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="@color/text_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gold_light"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:text="Total Zakat Payable"
+                android:textSize="13sp"
+                android:textColor="@color/text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:id="@+id/tvTotalZakat"
+                android:text=""
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/gold_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvNoZakatNote"
+                android:text="No zakat required — below nisab threshold"
+                android:textSize="13sp"
+                android:textStyle="italic"
+                android:textColor="@color/text_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

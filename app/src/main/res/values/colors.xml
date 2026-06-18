@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FAF6EE</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="gold_dark">#8B5A2B</color>
+    <color name="gold_light">#F5D88A</color>
+    <color name="bronze">#3D2817</color>
+    <color name="text_primary">#2B2118</color>
+    <color name="text_label">#6B5D4F</color>
+    <color name="error">#C0392B</color>
+    <color name="white">#FFFFFF</color>
+    <color name="primary">#8B5A2B</color>
+</resources>
