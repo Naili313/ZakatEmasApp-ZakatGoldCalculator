@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background">
@@ -8,100 +9,207 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="20dp">
 
-        <TextView
-            android:text="About This App"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="@color/primary"
-            android:layout_width="wrap_content"
+        <!-- Header Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"/>
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/gradient_gold_button"
+            android:padding="24dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
 
-        <TextView
-            android:text="Zakat Gold Calculator"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:text="Zakat Emas"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Gold Zakat Calculator • v1.0"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="ICT602"
+                    android:textSize="12sp"
+                    android:textColor="@color/bronze"
+                    android:background="@color/white"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Mobile Technology"
+                    android:textSize="12sp"
+                    android:textColor="@color/bronze"
+                    android:background="@color/white"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Developer Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"/>
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/card_border_gold"
+            android:padding="20dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
 
-        <TextView
-            android:text="Version 1.0"
-            android:textSize="14sp"
-            android:textColor="#888888"
-            android:layout_width="wrap_content"
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/developer_image"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:text="Naili Zamani"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/gold_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Developer • ICT602"
+                android:textSize="12sp"
+                android:textColor="@color/text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:text="Student No : 2025147473"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:text="Programme : CDCS240"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:text="Group : D1CDCS2405B"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!-- App Website Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"/>
+            android:orientation="vertical"
+            android:background="@drawable/card_border_gold"
+            android:padding="20dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
 
-        <!-- Developer Info -->
-        <TextView
-            android:text="Developer"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/primary"
-            android:layout_width="wrap_content"
+            <TextView
+                android:text="APP WEBSITE"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:text="Source code and app website:"
+                android:textSize="13sp"
+                android:textColor="@color/text_primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/tvAppUrl"
+                android:text="https://github.com/Naili313/ZakatEmasApp-ZakatGoldCalculator"
+                android:textSize="13sp"
+                android:textColor="@color/gold_dark"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!-- Copyright Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"/>
+            android:orientation="vertical"
+            android:background="@drawable/card_border_gold"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="20dp">
 
-        <TextView
-            android:id="@+id/tvDeveloperName"
-            android:text="Your Full Name"
-            android:textSize="15sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <TextView
+                android:text="© 2026 Naili Zamani. All rights reserved.\nDeveloped as part of ICT602 Mobile Technology, Universiti Teknologi MARA."
+                android:textSize="12sp"
+                android:textColor="@color/text_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
-        <TextView
-            android:id="@+id/tvStudentId"
-            android:text="Student ID: 2024XXXXXXX"
-            android:textSize="15sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvClass"
-            android:text="ICT602 - Mobile Technology Development"
-            android:textSize="15sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"/>
-
-        <!-- Copyright -->
-        <TextView
-            android:text="Copyright"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/primary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"/>
-
-        <TextView
-            android:text="© 2026 Your Full Name. All rights reserved."
-            android:textSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"/>
-
-        <!-- App Website -->
-        <TextView
-            android:text="App Website"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/primary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"/>
-
-        <TextView
-            android:id="@+id/tvAppUrl"
-            android:text="View on GitHub"
-            android:textSize="15sp"
-            android:textColor="#1B6CA8"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <!-- Visit Website Button -->
+        <Button
+            android:id="@+id/btnVisitWebsite"
+            android:text="VISIT APP WEBSITE"
+            android:textColor="@color/white"
+            android:background="@drawable/gradient_gold_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
 
     </LinearLayout>
 </ScrollView>
