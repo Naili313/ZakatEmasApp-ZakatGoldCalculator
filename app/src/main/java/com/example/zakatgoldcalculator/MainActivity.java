@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
             shareIntent.putExtra(Intent.EXTRA_TEXT,
-                    "Check out my Zakat Gold Calculator app: https://github.com/YOUR_USERNAME/YOUR_REPO");
+                    "Check out my Zakat Gold Calculator app: https://github.com/Naili313/ZakatEmasApp-ZakatGoldCalculator");
             startActivity(Intent.createChooser(shareIntent, "Share via"));
             return true;
         } else if (id == R.id.action_about) {
